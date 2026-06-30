@@ -1,0 +1,37 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>함수 사용 예시</title>
+	<script type="text/javascript">
+		function myFunction(){
+			//prompt 함수를 이용하여 이름을 입력 받아 출력한다.
+			var name = prompt("이름 입력 ? ", "홍길동") ;
+			document.write( "이름 : " + name + "<br>") ;
+
+			//나이를 입력 받아 alert() 함수를 이용하여 출력한다.
+			var age = prompt("나이 입력 ? ", "0") ;
+			alert( "나이 : " + age ) ;
+
+			//prompt 함수를 이용하여 색상 이름을 입력 받고 바탕 색상을 변경한다.
+			
+			var color = prompt("색상 입력 ? ", "white") ;
+			document.write( "색상 : " + color + "<br>") ;
+			document.bgColor = color ;	
+			
+			//confirm 함수를 이용하여 성별을 구별해보도록 한다.(남자 : 확인, 여자 : 취소)
+			var gender = confirm("귀하의 성별(남자 : 확인, 여자 : 취소)은 ? ") ;
+			if ( gender == true ) {
+				document.write( "성별 : 남자<br>") ;
+			} else {
+				document.write( "성별 : 여자<br>") ;
+			}
+		}
+	</script>	
+</head>
+<body>
+	<input type="button" value="Click Me" onclick="myFunction();"> 
+</body>
+</html>

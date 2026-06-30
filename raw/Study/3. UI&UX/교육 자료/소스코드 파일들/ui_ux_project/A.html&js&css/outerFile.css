@@ -1,0 +1,4 @@
+@CHARSET "EUC-KR";
+h3 { /* font-weight:bold => 보통 굵은 글꼴 */			 
+	font-size:50pt ; font-weight:bold ; color:green ; 
+} 

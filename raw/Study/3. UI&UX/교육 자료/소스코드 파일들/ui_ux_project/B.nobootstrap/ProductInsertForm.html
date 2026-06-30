@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>상품 등록</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        .container {
+            margin: 30px auto;
+            max-width: 800px;
+        }
+
+        h1 {
+            margin-bottom: 20px;
+        }
+
+        /* 행(row) */
+        .row {
+            display: flex;
+            margin-bottom: 15px;
+            align-items: center;
+        }
+
+        .label {
+            width: 20%;
+            font-weight: bold;
+        }
+
+        .input-area {
+            width: 80%;
+        }
+
+        /* 입력 요소 */
+        input, select {
+            width: 100%;
+            padding: 8px;
+            box-sizing: border-box;
+        }
+
+        /* 버튼 */
+        .btn {
+            padding: 10px 20px;
+            background-color: #0d6efd;
+            color: white;
+            border: none;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        .btn:hover {
+            background-color: #0b5ed7;
+        }
+
+        /* 오류 메시지 */
+        .error {
+            color: red;
+            font-size: 13px;
+            margin-top: 5px;
+            display: none;
+        }
+
+        /* 일반 오류 */
+        .alert {
+            background-color: #f8d7da;
+            color: #842029;
+            padding: 10px;
+            margin-bottom: 15px;
+            display: none;
+        }
+
+        /* 이미지 미리보기 */
+        #preview {
+            margin-top: 10px;
+            max-width: 200px;
+            display: none;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>상품 등록</h1>
+
+    <!-- 일반 오류 -->
+    <div id="generalError" class="alert">
+        상품 등록 중 오류가 발생했습니다.
+    </div>
+
+    <form id="productForm">
+
+        <!-- 이름 -->
+        <div class="row">
+            <div class="label">이름</div>
+            <div class="input-area">
+                <input type="text" name="name" placeholder="이름을 입력해 주세요.">
+                <div class="error">이름 오류</div>
+            </div>
+        </div>
+
+        <!-- 가격 -->
+        <div class="row">
+            <div class="label">가격</div>
+            <div class="input-area">
+                <input type="text" name="price" placeholder="가격을 입력해 주세요.">
+                <div class="error">가격 오류</div>
+            </div>
+        </div>
+
+        <!-- 카테고리 -->
+        <div class="row">
+            <div class="label">카테고리</div>
+            <div class="input-area">
+                <select name="category">
+                    <option value="-">-- 카테고리를 선택해 주세요.</option>
+                    <option value="BREAD">빵</option>
+                    <option value="BEVERAGE">음료수</option>
+                    <option value="CAKE">케이크</option>
+                </select>
+                <div class="error">카테고리 오류</div>
+            </div>
+        </div>
+
+        <!-- 재고 -->
+        <div class="row">
+            <div class="label">재고</div>
+            <div class="input-area">
+                <input type="text" name="stock" placeholder="재고를 입력해 주세요.">
+                <div class="error">재고 오류</div>
+            </div>
+        </div>
+
+        <!-- 이미지 -->
+        <div class="row">
+            <div class="label">이미지</div>
+            <div class="input-area">
+                <input type="file" name="image" id="imageInput">
+                <div class="error">이미지 오류</div>
+
+                <!-- 미리보기 -->
+                <img id="preview">
+            </div>
+        </div>
+
+        <!-- 상품 설명 -->
+        <div class="row">
+            <div class="label">상품 설명</div>
+            <div class="input-area">
+                <input type="text" name="description" placeholder="상품 설명을 입력해 주세요.">
+                <div class="error">설명 오류</div>
+            </div>
+        </div>
+
+        <button type="submit" class="btn">상품 등록</button>
+
+    </form>
+</div>
+
+<script>
+    const form = document.getElementById("productForm");
+    const preview = document.getElementById("preview");
+
+    // 이미지 미리보기
+    document.getElementById("imageInput").addEventListener("change", function(e) {
+        const file = e.target.files[0];
+        if (!file) return;
+
+        const reader = new FileReader();
+        reader.readAsDataURL(file);
+
+        reader.onloadend = function() {
+            preview.src = reader.result;
+            preview.style.display = "block";
+        };
+    });
+
+    // 제출 이벤트
+    form.addEventListener("submit", function(e) {
+        e.preventDefault();
+
+        const formData = new FormData(form);
+        const category = formData.get("category");
+
+        if (category === "-") {
+            alert("카테고리를 선택해 주세요.");
+            return;
+        }
+
+        console.log("전송 데이터:");
+        for (let [key, value] of formData.entries()) {
+            console.log(key, value);
+        }
+
+        alert("상품 등록 (예시)");
+    });
+</script>
+
+</body>
+</html>

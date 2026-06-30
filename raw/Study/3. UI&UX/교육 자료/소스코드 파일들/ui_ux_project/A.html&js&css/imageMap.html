@@ -1,0 +1,19 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>이미지 맵 테스트 하기</title>
+</head>
+<body>
+	<img src="./../images/pic6.jpg" usemap="#mymap" border="0">
+	<map name="mymap">
+		<area shape="rect" coords="200,200,300,300" href="link1.jsp" target="_blank">
+		
+		<area shape="circle" coords="100,100,100" href="link2.jsp" target="_self">
+	</map>
+	<br>
+	<a href="mailto:aaa@aaa.com">관리자에게</a>
+</body>
+</html>

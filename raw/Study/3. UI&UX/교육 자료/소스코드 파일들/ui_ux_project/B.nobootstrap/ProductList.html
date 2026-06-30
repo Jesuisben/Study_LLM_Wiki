@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>상품 목록</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        .container {
+            margin: 20px;
+        }
+
+        h1 {
+            margin-bottom: 20px;
+        }
+
+        /* 버튼 */
+        .btn {
+            padding: 6px 12px;
+            border: none;
+            cursor: pointer;
+            border-radius: 4px;
+            color: white;
+        }
+
+        .btn-primary { background-color: #0d6efd; }
+        .btn-warning { background-color: #ffc107; color: black; }
+        .btn-danger { background-color: #dc3545; }
+
+        .btn-sm {
+            padding: 4px 8px;
+            font-size: 12px;
+        }
+
+        /* 상품 목록 (3열) */
+        .row {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .col-4 {
+            width: calc(33.33% - 20px);
+        }
+
+        /* 카드 */
+        .card {
+            border: 1px solid #ddd;
+            border-radius: 6px;
+            overflow: hidden;
+            cursor: pointer;
+            height: 100%;
+        }
+
+        .card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .card-body {
+            padding: 10px;
+        }
+
+        /* 내부 테이블 */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        td {
+            padding: 4px;
+        }
+
+        .text-center {
+            text-align: center;
+        }
+
+        .mb-3 {
+            margin-bottom: 15px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>상품 목록 페이지</h1>
+
+    <!-- 관리자 버튼 -->
+    <div class="mb-3">
+        <a href="/product/insert">
+            <button id="insertBtn" class="btn btn-primary">상품 등록</button>
+        </a>
+    </div>
+
+    <!-- 상품 목록 -->
+    <div class="row" id="productContainer"></div>
+</div>
+
+<script>
+    const user = {
+        role: "ADMIN" // USER로 변경 가능
+    };
+
+    const products = [
+        { id: 1, name: "아메리카노", price: 4000, image: "/images/americano01.png" },
+        { id: 2, name: "브리오슈", price: 6000, image: "/images/brioche_02.png" },
+        { id: 3, name: "카푸치노", price: 5000, image: "/images/cappuccino02.png" },
+        { id: 4, name: "치아바타", price: 5000, image: "/images/ciabatta_02.png" },
+        { id: 5, name: "크로아상", price: 3000, image: "/images/croissant_02.png" },
+        { id: 6, name: "프렌치바게트", price: 6500, image: "/images/french_baguette_01.png" }
+    ];
+
+    const container = document.getElementById("productContainer");
+
+    // 관리자 버튼 숨김
+    if (user.role !== "ADMIN") {
+        document.getElementById("insertBtn").style.display = "none";
+    }
+
+    // 카드 생성
+    products.forEach(item => {
+        const col = document.createElement("div");
+        col.className = "col-4";
+
+        col.innerHTML = `
+            <div class="card" onclick="goDetail(${item.id})">
+                <img src="${item.image}">
+                <div class="card-body">
+                    <table>
+                        <tr>
+                            <td style="width:70%;">
+                                <strong>${item.name} (${item.id})</strong>
+                            </td>
+                            <td rowspan="2" class="text-center" id="admin-${item.id}">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                가격 : ${item.price.toLocaleString()} 원
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        `;
+
+        container.appendChild(col);
+
+        // 관리자 버튼
+        if (user.role === "ADMIN") {
+            const adminDiv = document.getElementById(`admin-${item.id}`);
+            adminDiv.innerHTML = `
+                <button class="btn btn-warning btn-sm" onclick="event.stopPropagation(); edit(${item.id})">수정</button>
+                <br>
+                <button class="btn btn-danger btn-sm" onclick="event.stopPropagation(); remove(${item.id}, '${item.name}')">삭제</button>
+            `;
+        }
+    });
+
+    function goDetail(id) {
+        alert("상품 상세 페이지 이동: " + id);
+    }
+
+    function edit(id) {
+        alert("수정 페이지 이동: " + id);
+    }
+
+    function remove(id, name) {
+        const isDelete = confirm(`'${name}' 상품을 삭제하시겠습니까?`);
+        if (!isDelete) return;
+
+        alert(`'${name}' 삭제 완료 (예시)`);
+        location.reload();
+    }
+</script>
+
+</body>
+</html>

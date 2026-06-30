@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>회원 가입</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        /* 전체 가운데 정렬 */
+        .wrapper {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 70vh;
+        }
+
+        .card {
+            width: 500px;
+            border: 1px solid #ddd;
+            border-radius: 6px;
+            padding: 20px;
+        }
+
+        h2 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        /* 행 구성 */
+        .row {
+            display: flex;
+            margin-bottom: 15px;
+            align-items: center;
+        }
+
+        .label {
+            width: 30%;
+        }
+
+        .input-area {
+            width: 70%;
+        }
+
+        input {
+            width: 100%;
+            padding: 8px;
+            box-sizing: border-box;
+        }
+
+        /* 버튼 */
+        .btn {
+            width: 100%;
+            padding: 10px;
+            background-color: #0d6efd;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+
+        .btn:hover {
+            background-color: #0b5ed7;
+        }
+
+        /* 오류 스타일 */
+        .error-text {
+            color: red;
+            font-size: 13px;
+            display: none;
+        }
+
+        .is-invalid {
+            border: 1px solid red;
+        }
+
+        /* 일반 오류 */
+        .alert {
+            background-color: #f8d7da;
+            color: #842029;
+            padding: 10px;
+            margin-bottom: 15px;
+            display: none;
+        }
+    </style>
+</head>
+<body>
+
+<div class="wrapper">
+    <div class="card">
+        <h2>회원 가입</h2>
+
+        <!-- 일반 오류 -->
+        <div id="generalError" class="alert">
+            회원 가입 중 오류가 발생하였습니다.
+        </div>
+
+        <form id="signupForm">
+
+            <!-- 이름 -->
+            <div class="row">
+                <div class="label">이름</div>
+                <div class="input-area">
+                    <input type="text" id="name" placeholder="이름을 입력해 주세요.">
+                    <div class="error-text">이름 오류</div>
+                </div>
+            </div>
+
+            <!-- 이메일 -->
+            <div class="row">
+                <div class="label">이메일</div>
+                <div class="input-area">
+                    <input type="text" id="email" placeholder="이메일을 입력해 주세요.">
+                    <div class="error-text">이메일 오류</div>
+                </div>
+            </div>
+
+            <!-- 비밀번호 -->
+            <div class="row">
+                <div class="label">비밀번호</div>
+                <div class="input-area">
+                    <input type="password" id="password" placeholder="비밀 번호를 입력해 주세요.">
+                    <div class="error-text">비밀번호 오류</div>
+                </div>
+            </div>
+
+            <!-- 주소 -->
+            <div class="row">
+                <div class="label">주소</div>
+                <div class="input-area">
+                    <input type="text" id="address" placeholder="주소를 입력해 주세요.">
+                    <div class="error-text">주소 오류</div>
+                </div>
+            </div>
+
+            <button type="submit" class="btn">회원 가입</button>
+
+        </form>
+    </div>
+</div>
+
+<script>
+    const form = document.getElementById("signupForm");
+
+    form.addEventListener("submit", function(e) {
+        e.preventDefault();
+
+        const name = document.getElementById("name");
+        const email = document.getElementById("email");
+        const password = document.getElementById("password");
+        const address = document.getElementById("address");
+
+        // 오류 초기화
+        document.querySelectorAll("input").forEach(el => {
+            el.classList.remove("is-invalid");
+        });
+
+        document.querySelectorAll(".error-text").forEach(el => {
+            el.style.display = "none";
+        });
+
+        let hasError = false;
+
+        if (name.value.trim() === "") {
+            setError(name, "이름을 입력해 주세요.");
+            hasError = true;
+        }
+
+        if (email.value.trim() === "") {
+            setError(email, "이메일을 입력해 주세요.");
+            hasError = true;
+        }
+
+        if (password.value.trim() === "") {
+            setError(password, "비밀번호를 입력해 주세요.");
+            hasError = true;
+        }
+
+        if (address.value.trim() === "") {
+            setError(address, "주소를 입력해 주세요.");
+            hasError = true;
+        }
+
+        if (hasError) return;
+
+        const parameters = {
+            name: name.value,
+            email: email.value,
+            password: password.value,
+            address: address.value
+        };
+
+        console.log("회원 가입 데이터:", parameters);
+
+        alert("회원 가입 성공 (예시)");
+        window.location.href = "/member/login";
+    });
+
+    function setError(input, message) {
+        input.classList.add("is-invalid");
+        const errorDiv = input.nextElementSibling;
+        errorDiv.innerText = message;
+        errorDiv.style.display = "block";
+    }
+</script>
+
+</body>
+</html>

@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>연산자 사용하기</title>
+
+	<style>
+		p { font-size:12px; font-weight:bold; }
+		span { color:red; }
+		img { float:left; }
+		#myarea {
+			position:relative;
+			left:10px;
+			top:60px;
+		}
+		input {
+			border:1px solid orange;
+			width:180px;
+			background:gold;
+			margin-bottom:20px;
+		}
+	</style>
+
+</head>
+
+<body>
+
+<form>
+	<input type="button" id="btn1" value="a=1, b=++a"><br>
+	<input type="button" id="btn2" value="a=1, b=a++"><br>
+	<input type="button" id="btn3" value="a=1, b=1, a++, b=b+1"><br>
+	<input type="button" id="btn4" value="1에서 10까지의 무작위 수"><br>
+	<input type="button" id="btn5" value="1에서 60까지의 무작위 수"><br>
+	<input type="button" id="btn6" value="시각 출력"><br>
+</form>
+
+<div id="myarea"></div>
+
+<hr>
+
+<script>
+	document.addEventListener("DOMContentLoaded", () => {
+
+		const area = document.getElementById("myarea");
+
+		const print = (text) => {
+			area.innerHTML = text;
+		};
+
+		// 증가 연산
+		document.getElementById("btn1").addEventListener("click", () => {
+			let a = 1;
+			let b = ++a;
+			print(`현재 a의 값은 ${a}이고, b의 값은 ${b}입니다.`);
+		});
+
+		document.getElementById("btn2").addEventListener("click", () => {
+			let a = 1;
+			let b = a++;
+			print(`현재 a의 값은 ${a}이고, b의 값은 ${b}입니다.`);
+		});
+
+		document.getElementById("btn3").addEventListener("click", () => {
+			let a = 1;
+			let b = 1;
+			a++;
+			b += 1;
+			print(`현재 a의 값은 ${a}이고, b의 값은 ${b}입니다.`);
+		});
+
+		// 랜덤 숫자
+		const randNum = (seed) => {
+			const current = new Date().getSeconds();
+			const num = (current % seed) + 1;
+			print(`1에서 ${seed} 사이의 무작위 수는 <strong>${num}</strong>입니다.`);
+		};
+
+		document.getElementById("btn4").addEventListener("click", () => randNum(10));
+		document.getElementById("btn5").addEventListener("click", () => randNum(60));
+
+		// 현재 시각
+		document.getElementById("btn6").addEventListener("click", () => {
+			const now = new Date();
+			const time = `${now.getHours()}시 ${now.getMinutes()}분 ${now.getSeconds()}초`;
+			print(time);
+		});
+
+		// 비교 결과 출력
+		const A = (5 == 5.00);
+		const B = ("나" == "섹시가이");
+		const C = (16 <= "16");
+		const D = ("Superman" > "Batman");
+		const E = ("슈퍼맨" > "원더우먼");
+
+		print(`
+        5 == 5.00의 결과 : ${A}<br>
+        '나' == '섹시가이'의 결과 : ${B}<br>
+        16 <= '16'의 결과 : ${C}<br>
+        Superman > Batman의 결과 : ${D}<br>
+        슈퍼맨 > 원더우먼의 결과 : ${E}<br>
+    `);
+
+		// 입력 처리
+		const input = prompt('숫자를 입력해주세요', '12');
+		const number = Number(input);
+
+		alert(number > 0
+				? `${number}는(은) 양수이다`
+				: `${number}는(은) 양수가 아니다`
+		);
+
+	});
+</script>
+
+</body>
+</html>

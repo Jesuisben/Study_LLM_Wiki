@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>Order List</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        .container {
+            margin: 20px;
+        }
+
+        /* 버튼 스타일 */
+        .btn {
+            padding: 6px 10px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            margin-right: 5px;
+            font-size: 12px;
+        }
+
+        .btn-secondary { background-color: #6c757d; color: white; }
+        .btn-danger { background-color: #dc3545; color: white; }
+        .btn-success { background-color: #198754; color: white; }
+
+        /* 중앙 정렬 */
+        .center-flex {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 50px;
+        }
+
+        /* 스피너 */
+        .spinner {
+            width: 40px;
+            height: 40px;
+            border: 5px solid #ccc;
+            border-top: 5px solid #333;
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        /* alert */
+        .alert {
+            padding: 10px;
+            border-radius: 4px;
+            margin-top: 10px;
+        }
+
+        .alert-danger {
+            background-color: #f8d7da;
+            color: #842029;
+        }
+
+        h1 {
+            margin-top: 20px;
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+
+    <!-- 상태 전환 버튼 -->
+    <div>
+        <button class="btn btn-secondary" onclick="showLoading()">Loading</button>
+        <button class="btn btn-danger" onclick="showError()">Error</button>
+        <button class="btn btn-success" onclick="showSuccess()">Success</button>
+    </div>
+
+    <!-- 🔹 로딩 화면 -->
+    <div id="loadingView" class="center-flex">
+        <div class="spinner"></div>
+    </div>
+
+    <!-- 🔹 에러 화면 -->
+    <div id="errorView" style="display:none;">
+        <div class="alert alert-danger">
+            주문 목록을 불러 오는 데 실패하였습니다.
+        </div>
+    </div>
+
+    <!-- 🔹 정상 화면 -->
+    <div id="successView" style="display:none;">
+        <h1>주문 내역</h1>
+        이전에 <span id="orderCount">3</span> 개 주문하셨네요.
+    </div>
+
+</div>
+
+<script>
+    function showLoading() {
+        document.getElementById("loadingView").style.display = "flex";
+        document.getElementById("errorView").style.display = "none";
+        document.getElementById("successView").style.display = "none";
+    }
+
+    function showError() {
+        document.getElementById("loadingView").style.display = "none";
+        document.getElementById("errorView").style.display = "block";
+        document.getElementById("successView").style.display = "none";
+    }
+
+    function showSuccess() {
+        document.getElementById("loadingView").style.display = "none";
+        document.getElementById("errorView").style.display = "none";
+        document.getElementById("successView").style.display = "block";
+
+        document.getElementById("orderCount").innerText = 5;
+    }
+
+    // 초기 상태
+    showLoading();
+</script>
+
+</body>
+</html>

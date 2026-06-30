@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Herb Story</title>
+	<style>
+		body {
+			background: #f5f6eb;
+			font-size: 14px;
+		}
+
+		#content1, #content2 {
+			padding: 10px 10px 5px 10px;
+			width: 550px;
+			border: 1px dotted green;
+			margin-bottom: 20px;
+		}
+
+		h5 {
+			font-size: 12pt;
+		}
+
+		#content1 ul, #content2 ol {
+			padding-left: 100px;
+		}
+
+		#left {
+			float: left;
+			margin-right: 10px;
+		}
+
+		#right {
+			float: right;
+			margin-left: 10px;
+		}
+
+		/* float 해제 (핵심) */
+		#content1::after, #content2::after {
+			content: "";
+			display: block;
+			clear: both;
+		}
+
+		ul {
+			list-style-image: url(/images/mybu.gif);
+		}
+
+		ul.in {
+			list-style-position: inside;
+		}
+
+		ol {
+			list-style-type: lower-roman;
+		}
+	</style>
+</head>
+<body>
+
+<h5>국화차 효능</h5>
+<div id="content1">
+	<img id="right" src="/images/herbtea3.jpg" alt="국화차 이미지">
+
+	<ul>
+		<li>옛부터 불로장생의 차로 간을 보호하고 눈을 밝게 하며 머리를 좋게 하고 피부를 윤택하게 합니다.</li>
+		<li>비타민이 풍부하여 겨울철 감기 예방에 특효가 있으며, 기관지 계통을 깨끗하게 해주어 기침, 천식, 가래 해소에 효과가 있습니다.</li>
+		<li>불면증에도 효과가 좋아 우려낸 잎으로 베개를 만들어 사용하면 더 큰 효과를 볼 수 있습니다.</li>
+	</ul>
+
+	<ul class="in">
+		<li>옛부터 불로장생의 차로 간을 보호하고 눈을 밝게 하며 머리를 좋게 하고 피부를 윤택하게 합니다.</li>
+		<li>비타민이 풍부하여 겨울철 감기 예방에 특효가 있으며, 기관지 계통을 깨끗하게 해줍니다.</li>
+		<li>불면증에도 효과가 좋아 우려낸 잎으로 베개를 만들어 사용하면 좋습니다.</li>
+	</ul>
+</div>
+
+<h5>국화차를 즐기는 법</h5>
+<div id="content2">
+	<img id="left" src="/images/herbtea2.gif" alt="국화차 준비 이미지">
+
+	<ol>
+		<li>국화를 다관에 넣고 뜨거운 물을 부어 약 30초 후 찻잔에 따르면 좋습니다.</li>
+		<li>개인별로는 찻잔에 3~4 송이를 넣어 우려 마시면 됩니다.</li>
+		<li>두 번째 우림부터 국화의 아름다움을 느낄 수 있습니다.</li>
+		<li>녹차와 함께 우려도 또 다른 맛을 느낄 수 있습니다.</li>
+	</ol>
+</div>
+
+</body>
+</html>

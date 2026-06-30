@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>Cart List</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        .container {
+            width: 80%;
+            margin: 30px auto;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        table, th, td {
+            border: 1px solid #CCCCCC;
+        }
+
+        th, td {
+            padding: 10px;
+            text-align: center;
+            vertical-align: middle;
+        }
+
+        thead {
+            background-color: #f2f2f2;
+        }
+
+        .row {
+            display: flex;
+            align-items: center;
+        }
+
+        .col-4 {
+            width: 30%;
+        }
+
+        .col-8 {
+            width: 70%;
+            display: flex;
+            align-items: center;
+        }
+
+        img {
+            border: 1px solid #DDDDDD;
+            border-radius: 5px;
+        }
+
+        input[type="number"] {
+            width: 80px;
+            text-align: center;
+        }
+
+        .btn {
+            padding: 5px 10px;
+            border: none;
+            cursor: pointer;
+        }
+
+        .btn-danger {
+            background-color: red;
+            color: white;
+        }
+
+        .btn-primary {
+            background-color: blue;
+            color: white;
+            padding: 10px 20px;
+        }
+
+        .text-end {
+            text-align: right;
+        }
+
+        .mt-3 {
+            margin-top: 15px;
+        }
+
+        .mb-4 {
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h2 class="mb-4">
+		<!-- em은 부모 요소, rem은 html(최상위 요소) -->
+        <span style="color: blue; font-size: 2rem;">홍길동</span>
+        <span style="font-size: 1.3rem;">님의 장바구니</span>
+    </h2>
+
+    <table>
+        <thead>
+        <tr>
+            <th style="font-size:1.2rem;">
+                <input type="checkbox"> 전체 선택
+            </th>
+            <th style="font-size:1.2rem;">상품 정보</th>
+            <th style="font-size:1.2rem;">수량</th>
+            <th style="font-size:1.2rem;">금액</th>
+            <th style="font-size:1.2rem;">삭제</th>
+        </tr>
+        </thead>
+
+        <tbody>
+        <!-- 상품 1 -->
+        <tr>
+            <td>
+                <input type="checkbox" checked>
+            </td>
+
+            <td>
+                <div class="row">
+                    <div class="col-4">
+                        <img src="/images/americano01.png" width="80" height="80">
+                    </div>
+                    <div class="col-8">
+                        아메리카노
+                    </div>
+                </div>
+            </td>
+
+            <td>
+                <input type="number" value="1" min="1">
+            </td>
+
+            <td>
+                1,000,000 원
+            </td>
+
+            <td>
+                <button class="btn btn-danger">삭제</button>
+            </td>
+        </tr>
+
+        <!-- 상품 2 -->
+        <tr>
+            <td>
+                <input type="checkbox">
+            </td>
+
+            <td>
+                <div class="row">
+                    <div class="col-4">
+                        <img src="/images/brioche_02.png" width="80" height="80">
+                    </div>
+                    <div class="col-8">
+                        스마트폰
+                    </div>
+                </div>
+            </td>
+
+            <td>
+                <input type="number" value="2" min="1">
+            </td>
+
+            <td>
+                2,000,000 원
+            </td>
+
+            <td>
+                <button class="btn btn-danger">삭제</button>
+            </td>
+        </tr>
+
+        </tbody>
+    </table>
+
+    <h3 class="text-end mt-3">총 주문 금액 : 3,000,000원</h3>
+
+    <div class="text-end">
+        <button class="btn btn-primary">주문하기</button>
+    </div>
+
+</div>
+
+</body>
+</html>

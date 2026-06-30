@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Image Examples</title>
+
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+
+    <style>
+        .img-box {
+            width: 250px;
+            height: 160px;
+            object-fit: cover;
+            margin: 10px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        /* hover 확대 */
+        .zoom:hover {
+            transform: scale(1.1);
+        }
+
+        /* 흑백 */
+        .gray {
+            filter: grayscale(100%);
+        }
+
+        /* 선택 테두리 */
+        .active {
+            border: 4px solid #0d6efd;
+        }
+
+        /* 카테고리 이미지 */
+        .menu-img {
+            width: 200px;
+            height: 150px;
+            object-fit: cover;
+            margin: 10px;
+        }
+
+        /* 큰 이미지 */
+        #mainImage {
+            width: 100%;
+            height: 300px;
+            max-width: 500px;
+            object-fit: cover;
+            transition: transform 0.3s ease;
+            transform-origin: top left;
+        }
+
+        #mainImage:hover {
+            transform: scale(1.1);
+        }
+
+        /* 썸네일 */
+        .thumb-img {
+            width: 120px;
+            height: 80px;
+            object-fit: cover;
+            cursor: pointer;
+            margin: 5px;
+            border: 2px solid transparent;
+        }
+
+        .active-thumb {
+            border: 2px solid #0d6efd;
+        }
+
+        .rotate-img {
+            width: 120px;
+            height: 80px;
+            object-fit: cover;
+            margin: 5px;
+        }
+
+        .veryhigh {
+            height: 200px;
+        }
+
+        .image-box {
+            width: 300px;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+
+<body class="container mt-4">
+
+<h3>이미지 활용 예제 5가지</h3>
+
+<!-- 1️⃣ Hover 확대 -->
+<h5>1. Hover 확대</h5>
+<img src="/images/brioche_02.png" class="img-box zoom">
+
+<hr>
+
+<!-- 2️⃣ 클릭 시 흑백 전환 -->
+<h5>2. 클릭 시 흑백 전환</h5>
+<img id="grayImg" src="/images/croissant_02.png" class="img-box">
+
+<hr>
+
+<!-- 3️⃣ 선택 이미지 강조 -->
+<h5>3. 선택 이미지 강조</h5>
+<div>
+    <img src="/images/croissant_02.png" class="img-box select-img">
+    <img src="/images/cappuccino02.png" class="img-box select-img">
+    <img src="/images/wine01.png" class="img-box select-img">
+</div>
+
+<hr>
+
+<!-- 4️⃣ 카테고리 필터 -->
+<h5>4. 카테고리 필터</h5>
+<select id="categorySelect" class="form-select w-25 mb-2">
+    <option value="all">전체 보기</option>
+    <option value="bread">빵</option>
+    <option value="drink">음료수</option>
+    <option value="wine">와인</option>
+</select>
+
+<div>
+    <img src="/images/brioche_02.png" class="menu-img" data-category="bread">
+    <img src="/images/french_baguette_01.png" class="menu-img" data-category="bread">
+    <img src="/images/americano01.png" class="menu-img" data-category="drink">
+    <img src="/images/cappuccino02.png" class="menu-img" data-category="drink">
+    <img src="/images/whitewine02.png" class="menu-img" data-category="wine">
+    <img src="/images/wine01.png" class="menu-img" data-category="wine">
+</div>
+
+<hr>
+
+<!-- 5️⃣ 썸네일 → 큰 이미지 -->
+<h5>5. 썸네일 → 큰 이미지 변경</h5>
+<img id="mainImage" src="/images/americano01.png" class="img-fluid mb-2">
+
+<div>
+    <img src="/images/americano01.png" class="thumb-img active-thumb">
+    <img src="/images/whitewine02.png" class="thumb-img">
+    <img src="/images/brioche_02.png" class="thumb-img">
+</div>
+
+<hr>
+
+<!-- 6️⃣ 이미지 회전 -->
+<h5>6. 이미지 회전 (이전 / 다음)</h5>
+<div class="d-flex align-items-center">
+    <button id="prevBtn" class="btn btn-primary me-2">이전</button>
+
+    <div id="rotateBox" class="d-flex">
+        <img src="/images/brioche_02.png" class="rotate-img">
+        <img src="/images/cappuccino02.png" class="rotate-img">
+        <img src="/images/wine01.png" class="rotate-img">
+    </div>
+
+    <button id="nextBtn" class="btn btn-success ms-2">다음</button>
+</div>
+
+<hr>
+
+<!-- 7️⃣ 이미지 스타일 변경 -->
+<h5>7. 이미지 스타일 변경</h5>
+
+<div class="form-check form-check-inline">
+    <input class="form-check-input" type="radio" name="imgStyle" value="rounded" checked>
+    <label class="form-check-label">Rounded Corners</label>
+</div>
+
+<div class="form-check form-check-inline">
+    <input class="form-check-input" type="radio" name="imgStyle" value="circle">
+    <label class="form-check-label">Circle</label>
+</div>
+
+<div class="form-check form-check-inline">
+    <input class="form-check-input" type="radio" name="imgStyle" value="thumbnail">
+    <label class="form-check-label">Thumbnail</label>
+</div>
+
+<div class="image-box">
+    <img id="myImage" src="/images/cappuccino02.png" class="img-fluid rounded">
+</div>
+
+<div class="veryhigh"></div>
+
+<script>
+    $(function () {
+
+        // 2️⃣ 흑백 토글
+        $("#grayImg").click(function () {
+            $(this).toggleClass("gray");
+        });
+
+        // 3️⃣ 선택 효과
+        $(".select-img").click(function () {
+            $(".select-img").removeClass("active");
+            $(this).addClass("active");
+        });
+
+        // 4️⃣ 카테고리 필터
+        $("#categorySelect").change(function () {
+
+            const selected = $(this).val();
+
+            if (selected === "all") {
+                $(".menu-img").show();
+            } else {
+                $(".menu-img").hide();
+                $(".menu-img[data-category='" + selected + "']").show();
+            }
+        });
+
+        // 5️⃣ 썸네일 클릭
+        $(".thumb-img").click(function () {
+
+            const newSrc = $(this).attr("src");
+
+            $("#mainImage").attr("src", newSrc);
+
+            $(".thumb-img").removeClass("active-thumb");
+            $(this).addClass("active-thumb");
+        });
+
+        // 6️⃣ 이전 버튼
+        $("#prevBtn").click(function () {
+            const last = $("#rotateBox img").last();
+            $("#rotateBox").prepend(last);
+        });
+
+        // 6️⃣ 다음 버튼
+        $("#nextBtn").click(function () {
+            const first = $("#rotateBox img").first();
+            $("#rotateBox").append(first);
+        });
+
+        // 7️⃣ 이미지 스타일 변경
+        $("input[name='imgStyle']").change(function () {
+
+            const value = $(this).val();
+            const img = $("#myImage");
+
+            img.removeClass("rounded rounded-circle img-thumbnail");
+
+            if (value === "rounded") {
+                img.addClass("rounded");
+            } else if (value === "circle") {
+                img.addClass("rounded-circle");
+            } else if (value === "thumbnail") {
+                img.addClass("img-thumbnail");
+            }
+        });
+
+    });
+</script>
+
+</body>
+</html>

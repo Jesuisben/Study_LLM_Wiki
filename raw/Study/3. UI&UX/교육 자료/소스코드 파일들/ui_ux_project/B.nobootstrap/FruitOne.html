@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>Fruit Detail</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        .container {
+            margin: 20px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        td {
+            border: 1px solid #ddd;
+            padding: 10px;
+        }
+
+        /* 왼쪽 컬럼 스타일 */
+        td:first-child {
+            background-color: #f2f2f2;
+            font-weight: bold;
+            width: 30%;
+            text-align: center;
+        }
+
+        /* 오른쪽 컬럼 */
+        td:last-child {
+            text-align: left;
+            padding-left: 15px;
+        }
+
+        /* hover 효과 */
+        tr:hover {
+            background-color: #f9f9f9;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <table>
+        <tbody>
+        <tr>
+            <td>아이디</td>
+            <td>1</td>
+        </tr>
+        <tr>
+            <td>상품명</td>
+            <td>사과</td>
+        </tr>
+        <tr>
+            <td>단가</td>
+            <td>3,000원</td>
+        </tr>
+        </tbody>
+    </table>
+</div>
+
+</body>
+</html>

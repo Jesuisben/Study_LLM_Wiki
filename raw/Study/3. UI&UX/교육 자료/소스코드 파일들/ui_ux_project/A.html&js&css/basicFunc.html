@@ -1,0 +1,53 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>탬플릿</title>
+	<script type="text/javascript">
+		var sTable = "<table border='1' align='center' width='50%'>" ;
+	
+		var gender = prompt("귀하의 성별은? 남자(1), 여자(0)", "1") ;
+		sTable += "<tr><td>성별</td>" ;
+		if( gender == 1 ){
+			sTable += "<td>남자</td>"
+		}else{
+			sTable += "<td>여자</td>"
+		}
+		sTable += "</tr>" ;
+		//////////////////////////////////////////////////////////////////////////////////////////////
+		var age = prompt("몇살? (20세 미만 : 0, 20세 이상 : 1)", "1") ;
+		sTable += "<tr><td>성인 여부</td>" ;
+		if( age >= 20 ){
+			sTable += "<td>성인</td>"
+		}else{
+			sTable += "<td>미성년자</td>"
+		}		
+		sTable += "</tr>" ;
+		//////////////////////////////////////////////////////////////////////////////////////////////
+		var jungsu = prompt("정수를 입력하세요,", "0") ;
+		sTable += "<tr><td>짝홀 여부</td>" ;
+		if( jungsu % 2 == 0 ){
+			sTable += "<td>" + jungsu + "은(는) 짝수</td>"
+		}else{
+			sTable += "<td>" + jungsu + "은(는) 홀수</td>"
+		}
+		sTable += "</tr>" ;
+		//////////////////////////////////////////////////////////////////////////////////////////////			
+		var result = confirm("로그 아웃하시겠습니까?") ;
+		sTable += "<tr><td>로그 아웃 여부</td>" ;
+		if( result == true ){
+			sTable += "<td>yes</td>"
+		}else{
+			sTable += "<td>no</td>"
+		}
+		//////////////////////////////////////////////////////////////////////////////////////////////
+		sTable += "</tr>" ;
+		sTable += "</table>" ;
+		document.write( sTable ) ;
+	</script>		
+</head>
+<body>
+</body>
+</html>

@@ -1,0 +1,29 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>탬플릿</title>
+	<script type="text/javascript">
+		function openWin( newWindow ){
+			var myWidth = 300 ;
+			var myHeight = 300 ;
+			
+			var newWidth = ( screen.width - myWidth ) / 2 ;
+			var newHeight = ( screen.height - myHeight ) / 2 ;
+			
+			var options = 'width=' + newWidth + ",height="  + newHeight ;  
+			
+			window.open(newWindow, 'mytitle', options) ;
+		}
+	</script>		
+</head>
+<body>
+	<h3>열기 버튼을 클릭하세요</h3>
+	<form action="" name="myform">
+		결과 : <input type="text" name="result"><br>
+		<input type="button" value="열기" onClick="openWin('end.jsp')">
+	</form>
+</body>
+</html>

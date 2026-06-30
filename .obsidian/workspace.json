@@ -4,21 +4,21 @@
     "type": "split",
     "children": [
       {
-        "id": "39767e92c56369d8",
+        "id": "e1cf989479358cf6",
         "type": "tabs",
         "children": [
           {
-            "id": "71066878599e4e62",
+            "id": "ff061e3a7af74eaf",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "wiki/index.md",
+                "file": "raw/Study/1. Java/2026.02.27(금)/2026.02.27(금).md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "index"
+              "title": "2026.02.27(금)"
             }
           }
         ]
@@ -78,7 +78,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 271.5
+    "width": 338.5
   },
   "right": {
     "id": "dae217cf4dff2dfe",
@@ -184,6 +184,7 @@
   },
   "left-ribbon": {
     "hiddenItems": {
+      "code-files:Create Code File": false,
       "switcher:빠른 전환기 열기": false,
       "graph:그래프 뷰 열기": false,
       "canvas:새 캔버스 만들기": false,
@@ -191,40 +192,59 @@
       "templates:템플릿 삽입": false,
       "command-palette:명령어 팔레트 열기": false,
       "bases:새 베이스 생성하기": false,
-      "obsidian-git:Open Git source control": false
+      "obsidian-git:Open Git source control": false,
+      "pdf-plus:PDF++: Toggle auto-copy": false,
+      "pdf-plus:PDF++: Toggle auto-focus": false,
+      "pdf-plus:PDF++: Toggle auto-paste": false
     }
   },
-  "active": "71066878599e4e62",
+  "active": "ff061e3a7af74eaf",
   "lastOpenFiles": [
-    "환영합니다!.md",
-    "wiki/index.md",
-    "wiki/log.md",
-    "wiki/summaries/2026-02-26-orientation.md",
-    "wiki/_meta/agent-coding-guidelines.md",
-    "raw/Study/1. Java/2026.02.26(목)/2026.02.26(목).md",
+    "raw/Study/1. Java/2026.03.03(화)/2026.03.03(화).md",
+    "raw/Study/1. Java/2026.02.27(금)/2026.02.27(금).md",
+    "raw/Study/4. FrontEnd_BackEnd/2026.04.03(금)/2026.04.03(금).md",
+    "raw/Study/4. FrontEnd_BackEnd/2026.04.02(목)/2026.04.02(목).md",
+    "raw/Study/4. FrontEnd_BackEnd/2026.04.01(수)/2026.04.01(수).md",
+    "raw/Study/4. FrontEnd_BackEnd/2026.03.31(화)/2026.03.31(화).md",
+    "raw/Study/4. FrontEnd_BackEnd/2026.03.30(월) - 시작/2026.03.30(월) - 시작.md",
+    "raw/Study/3. UI&UX/2026.03.27(금)/2026.03.27(금).md",
+    "raw/Study/3. UI&UX/2026.03.26(목)/2026.03.26(목).md",
+    "raw/Study/3. UI&UX/2026.03.25(수)/2026.03.25(수).md",
+    "raw/Study/3. UI&UX/2026.03.24(화)/2026.03.24(화).md",
+    "raw/Study/3. UI&UX/2026.03.23(월) - 시작/2026.03.23(월) - 시작.md",
+    "raw/Study/1. Java/2026.03.11(수)/2026.00.00(00).md",
+    "raw/Study/1. Java/2026.03.10(화)/2026.00.00(00).md",
+    "raw/Study/1. Java/2026.03.09(월)/2026.00.00(00).md",
+    "raw/Study/1. Java/2026.03.06(금)/2026.00.00(00).md",
+    "raw/Study/1. Java/2026.00.00(00).md",
+    "raw/Study/1. Java/2026.03.05(목)/2026.00.00(00).md",
+    "raw/Study/1. Java/2026.03.04(수)/2026.00.00(00).md",
+    "raw/Study/1. Java/2026.03.03(화)/2026.00.00(00).md",
+    "raw/Study/0. 교육명/2026.00.00(00)/2026.00.00(00).md",
+    "raw/Study/1. Java/2026.02.27(금)/2026.00.00(00).md",
+    "2026.00.00(00).md",
+    "raw/Study/1. Java/2026.02.27(금)/3번 문제.png",
+    "raw/Study/3. UI&UX/교육 자료/소스코드 파일들/ui_ux_project/A.html&js&css/imageMap.html",
+    "raw/Study/3. UI&UX/교육 자료/소스코드 파일들/ui_ux_project/A.html&js&css/fisrtExam.html",
+    "raw/Study/3. UI&UX/교육 자료/소스코드 파일들/ui_ux_project/A.html&js&css/aaatemplate.html",
+    "raw/Study/3. UI&UX/교육 자료/images/herbtea2.gif",
+    "raw/Study/3. UI&UX/교육 자료/images/basil.jpg",
+    "raw/Study/3. UI&UX/교육 자료/images/americano01.png",
+    "raw/Study/3. UI&UX/교육 자료/jQueryImageTest/jQueryImageTest.html",
+    "raw/Study/3. UI&UX/교육 자료/IT 관련 용어2.pdf",
+    "raw/Study/2. Oracle/교육 자료/디비버(Dbeaver) 사용법(version 2.0).pdf",
+    "raw/Study/3. UI&UX/교육 자료/웹 서비스 Ui&UX.pdf",
+    "raw/Study/3. UI&UX/교육 자료/library&framework.png",
+    "raw/Study/3. UI&UX/교육 자료/IT 관련 용어.pdf",
+    "raw/Study/3. UI&UX/교육 자료/HTML&JS&CSS 이론(new).pdf",
+    "raw/Study/3. UI&UX/교육 자료/FrontEnd&BackEnd.pdf",
+    "raw/Study/3. UI&UX/교육 자료/소스코드 파일들/ui_ux_project/A.html&js&css/Koala.jpg",
+    "raw/Study/3. UI&UX/교육 자료/소스코드 파일들/ui_ux_project/A.html&js&css/fanta02.png",
+    "raw/Study/3. UI&UX/교육 자료/소스코드 파일들/ui_ux_project/A.html&js&css/apple.jpg",
+    "raw/Study/3. UI&UX/교육 자료/jQueryImageTest/wine01.png",
+    "raw/Study/3. UI&UX/교육 자료/jQueryImageTest/whitewine02.png",
     "raw/markdown-grammar/markdown-grammar.md",
-    "raw/ai-instructions/llm-wiki-command-cheatsheet.md",
-    "raw/Study/1. Java/2026.02.26(목)",
-    "raw/Study/1. Java",
-    "wiki/_meta/llm-wiki-command-reference.md",
-    "wiki/concepts/markdown-basic-syntax.md",
-    "wiki/_meta/hermes-default-profile-mode-system.md",
-    "wiki/_meta/llm-wiki-operating-model.md",
-    "profile-souls/autopilot-SOUL.md",
-    "raw/ai-instructions/karpathy-agent-guidelines.md",
-    "raw/ai-instructions/hermes-agent-llm-wiki-initial-setup.md",
-    "raw/무제",
-    "raw/Study",
-    "raw/markdown-grammar",
-    "raw/ai-instructions/hermes-default-profile-instructions.md",
-    "raw/ai-instructions",
-    "AGENTS.md",
-    "profile-souls/copy-paste/default-SOUL-full-copy-paste.txt",
-    "profile-souls/copy-paste/default-mode-system-SOUL.txt",
-    "profile-souls/copy-paste/autopilot-copy-paste.txt",
-    "profile-souls/copy-paste/guarded-copy-paste.txt",
-    "profile-souls/balanced-SOUL.md",
-    "profile-souls/guarded-SOUL.md",
-    "wiki/_meta/hermes-home-laptop-setup.md"
+    "raw/Study/0. 교육명/교육명 총정리/교육명 총정리.md",
+    "raw/Study/1. Java/2026.02.27(금)/깃허브 초기 설정.md"
   ]
 }
