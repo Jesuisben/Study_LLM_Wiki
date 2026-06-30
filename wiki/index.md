@@ -2,7 +2,7 @@
 
 > 이 파일은 `wiki/` 전체의 목차이자 길잡이다.  
 > 질문에 답하거나 새 자료를 ingest할 때 이 파일을 먼저 읽는다.  
-> Last updated: 2026-06-29 | Total pages: 0
+> Last updated: 2026-06-30 | Total pages: 1
 
 ## 사용 방법
 
@@ -34,3 +34,4 @@
 ## Meta
 
 <!-- 위키 운영 문서, lint 리포트, 토픽맵 등 -->
+- [[_meta/hermes-home-laptop-setup|집 노트북에 LLM Wiki와 Hermes Agent 환경 복제하기]] — 집 노트북에서 현재 LLM Wiki와 Hermes Agent 설정/기억/스킬을 최대한 동일하게 복제하는 절차

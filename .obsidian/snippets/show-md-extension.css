@@ -1,0 +1,4 @@
+.nav-file-title[data-path$=".md"] .nav-file-title-content::after {
+  content: ".md";
+  color: var(--text-faint);
+}
