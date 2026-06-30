@@ -2,22 +2,24 @@
 
 > 이 파일은 `wiki/` 전체의 목차이자 길잡이다.  
 > 질문에 답하거나 새 자료를 ingest할 때 이 파일을 먼저 읽는다.  
-> Last updated: 2026-06-30 | Total pages: 1
+> Last updated: 2026-06-30 | Total pages: 7
 
 ## 사용 방법
 
 - 모든 위키 페이지는 아래 섹션 중 하나에 등록한다.
-- 각 항목은 `- [[경로/파일명|표시 제목]] — 한 줄 설명` 형식을 권장한다.
+- 각 항목은 `- \[\[경로/파일명|표시 제목\]\] — 한 줄 설명` 형식을 권장한다.
 - 새 페이지를 만들면 반드시 이 파일을 업데이트한다.
 - 페이지 수가 많아지면 커리큘럼 단계별 또는 알파벳/주제별 하위 섹션으로 나눈다.
 
 ## Summaries
 
 <!-- 수업/자료 단위 요약 페이지. 예: - [[summaries/2026-06-29-java-variables|Java 변수 수업 요약]] — 변수와 자료형을 처음 배운 날의 핵심 정리 -->
+- [[summaries/2026-02-26-orientation|2026-02-26 오리엔테이션과 개발 환경 준비]] — 국비지원 과정 첫날 OT, 출결/휴가 규칙, 개발 도구 설치 준비 정리
 
 ## Concepts
 
 <!-- 개념 페이지. 예: - [[concepts/java-variable|Java 변수]] — 값을 저장하기 위한 이름 붙은 공간 -->
+- [[concepts/markdown-basic-syntax|Markdown 기본 문법]] — 제목, 강조, 목록, 코드 블록, 표, 링크 등 Markdown 기본 문법 정리
 
 ## Entities
 
@@ -34,4 +36,8 @@
 ## Meta
 
 <!-- 위키 운영 문서, lint 리포트, 토픽맵 등 -->
+- [[_meta/agent-coding-guidelines|AI Agent 코딩 작업 지침]] — AI Agent에게 코딩 작업을 맡길 때의 단순성, 외과적 수정, 검증 중심 원칙
 - [[_meta/hermes-home-laptop-setup|집 노트북에 LLM Wiki와 Hermes Agent 환경 복제하기]] — 집 노트북에서 현재 LLM Wiki와 Hermes Agent 설정/기억/스킬을 최대한 동일하게 복제하는 절차
+- [[_meta/hermes-default-profile-mode-system|Hermes default 프로필 모드 시스템]] — default 프로필 하나에서 safe/smart/danger 모드를 전환하는 운영 방식
+- [[_meta/llm-wiki-command-reference|LLM Wiki 명령어 참고]] — ingest, query, lint, update, compare 등 LLM Wiki 작업 요청 표현 모음
+- [[_meta/llm-wiki-operating-model|LLM Wiki 운영 모델]] — raw/wiki/schema 세 계층과 index/log 중심의 LLM Wiki 운영 방식

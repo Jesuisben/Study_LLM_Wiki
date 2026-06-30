@@ -11,10 +11,14 @@
             "id": "71066878599e4e62",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {},
+              "type": "markdown",
+              "state": {
+                "file": "wiki/index.md",
+                "mode": "source",
+                "source": false
+              },
               "icon": "lucide-file",
-              "title": "새 탭"
+              "title": "index"
             }
           }
         ]
@@ -190,29 +194,37 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "7c29ee296c96d9f0",
+  "active": "71066878599e4e62",
   "lastOpenFiles": [
+    "환영합니다!.md",
+    "wiki/index.md",
+    "wiki/log.md",
+    "wiki/summaries/2026-02-26-orientation.md",
+    "wiki/_meta/agent-coding-guidelines.md",
+    "raw/Study/1. Java/2026.02.26(목)/2026.02.26(목).md",
+    "raw/markdown-grammar/markdown-grammar.md",
+    "raw/ai-instructions/llm-wiki-command-cheatsheet.md",
+    "raw/Study/1. Java/2026.02.26(목)",
+    "raw/Study/1. Java",
+    "wiki/_meta/llm-wiki-command-reference.md",
+    "wiki/concepts/markdown-basic-syntax.md",
+    "wiki/_meta/hermes-default-profile-mode-system.md",
+    "wiki/_meta/llm-wiki-operating-model.md",
+    "profile-souls/autopilot-SOUL.md",
     "raw/ai-instructions/karpathy-agent-guidelines.md",
     "raw/ai-instructions/hermes-agent-llm-wiki-initial-setup.md",
-    "raw/markdown-grammar/markdown-grammar.md",
     "raw/무제",
     "raw/Study",
     "raw/markdown-grammar",
     "raw/ai-instructions/hermes-default-profile-instructions.md",
-    "wiki/log.md",
     "raw/ai-instructions",
     "AGENTS.md",
     "profile-souls/copy-paste/default-SOUL-full-copy-paste.txt",
     "profile-souls/copy-paste/default-mode-system-SOUL.txt",
     "profile-souls/copy-paste/autopilot-copy-paste.txt",
     "profile-souls/copy-paste/guarded-copy-paste.txt",
-    "profile-souls/copy-paste/balanced-copy-paste.txt",
-    "profile-souls/copy-paste",
-    "profile-souls/autopilot-SOUL.md",
     "profile-souls/balanced-SOUL.md",
     "profile-souls/guarded-SOUL.md",
-    "wiki/_meta/hermes-home-laptop-setup.md",
-    "wiki/index.md",
-    "환영합니다!.md"
+    "wiki/_meta/hermes-home-laptop-setup.md"
   ]
 }
