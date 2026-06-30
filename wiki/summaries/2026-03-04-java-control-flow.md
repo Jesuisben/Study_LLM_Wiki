@@ -1,0 +1,46 @@
+---
+title: 2026-03-04 Java 제어문과 조건문
+created: 2026-06-30
+updated: 2026-06-30
+type: summary
+tags: [java]
+sources: ["raw/Study/1. Java/2026.03.04(수)/2026.03.04(수).md"]
+status: growing
+confidence: medium
+---
+
+# 2026-03-04 Java 제어문과 조건문
+
+## 한 줄 요약
+
+단순 if부터 양자택일 조건문까지 제어문의 기본 흐름을 배운 날이다.
+
+## 배운 내용
+
+- 프로그램은 기본적으로 위에서 아래로 실행되지만, 제어문을 쓰면 실행 흐름을 바꿀 수 있다.
+- `if`는 조건이 참일 때만 특정 블록을 실행한다.
+- `if-else`는 참/거짓 두 갈래 중 하나를 선택한다.
+- 조건식에는 비교 연산자와 논리 연산자를 함께 사용한다.
+
+## 핵심 개념
+
+- [[concepts/java-conditional-logic|Java 조건 판단]]
+- [[concepts/java-operators|Java 연산자]]
+
+## 실습 / 예제
+
+- 원본 수업 노트의 시간대별 실습 흐름을 기준으로 정리했다.
+- 자세한 코드와 실행 결과는 원본 `raw` 파일을 출처로 다시 확인한다.
+
+## 헷갈린 점 / 질문
+
+- 원본에 `추가 공부`, `중요`, `????????`로 표시된 부분은 추후 개념 페이지에서 더 보강할 후보로 남긴다.
+
+## 관련 페이지
+
+- [[concepts/java-conditional-logic|Java 조건 판단]]
+- [[concepts/java-operators|Java 연산자]]
+
+## 출처
+
+- `raw/Study/1. Java/2026.03.04(수)/2026.03.04(수).md`

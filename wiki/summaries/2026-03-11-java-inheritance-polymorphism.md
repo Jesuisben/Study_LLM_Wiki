@@ -1,0 +1,46 @@
+---
+title: 2026-03-11 Java 상속과 참조 형변환
+created: 2026-06-30
+updated: 2026-06-30
+type: summary
+tags: [java]
+sources: ["raw/Study/1. Java/2026.03.11(수)/2026.03.11(수).md"]
+status: growing
+confidence: medium
+---
+
+# 2026-03-11 Java 상속과 참조 형변환
+
+## 한 줄 요약
+
+상속 구조에서 `private`, 생성자, 참조 형변환, 오버라이딩을 다룬 날이다.
+
+## 배운 내용
+
+- 서브클래스는 `extends`로 수퍼클래스를 상속받아 공통 속성과 동작을 재사용한다.
+- `private` 멤버는 직접 접근할 수 없으므로 getter/setter, `protected`, 생성자 전달 같은 방식이 필요하다.
+- 승급(upcasting)과 강등(downcasting)을 통해 부모 타입 참조와 자식 객체의 관계를 실습했다.
+- `toString()` 오버라이딩처럼 같은 메서드 이름을 클래스별로 다르게 구현하는 흐름을 확인했다.
+
+## 핵심 개념
+
+- [[concepts/java-inheritance|Java 상속]]
+- [[concepts/java-class-object|Java 클래스와 객체]]
+
+## 실습 / 예제
+
+- 원본 수업 노트의 시간대별 실습 흐름을 기준으로 정리했다.
+- 자세한 코드와 실행 결과는 원본 `raw` 파일을 출처로 다시 확인한다.
+
+## 헷갈린 점 / 질문
+
+- 원본에 `추가 공부`, `중요`, `????????`로 표시된 부분은 추후 개념 페이지에서 더 보강할 후보로 남긴다.
+
+## 관련 페이지
+
+- [[concepts/java-inheritance|Java 상속]]
+- [[concepts/java-class-object|Java 클래스와 객체]]
+
+## 출처
+
+- `raw/Study/1. Java/2026.03.11(수)/2026.03.11(수).md`

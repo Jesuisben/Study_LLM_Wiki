@@ -63,3 +63,112 @@
   - `wiki/summaries/2026-02-26-orientation.md` — 교육 과정 정보, 출결/외출/휴가 규칙, 자습, Notepad++/Chrome/IntelliJ/Zoom 설치 준비 정리.
 - 수정한 파일:
   - `wiki/index.md` — Summaries 섹션에 새 요약 페이지를 등록하고 전체 페이지 수를 갱신함.
+
+## [2026-06-30] ingest | 2026-02-27 GitHub 초기 설정
+
+- 목적: Java 프로젝트를 Git으로 관리하고 GitHub 원격 저장소 및 IntelliJ IDEA와 연결하는 초기 설정 흐름을 위키에 반영함.
+- 읽은 원본:
+  - `raw/Study/1. Java/2026.02.27(금)/깃허브 초기 설정.md`
+  - `raw/Study/1. Java/2026.02.27(금)/2026.02.27(금).md` — 작업 중 Java 수업 본문이 추가되어, 아래 `2026-02-27 Java 기본 자료형과 연산자` 항목에서 별도 ingest함.
+- 생성한 파일:
+  - `wiki/summaries/2026-02-27-github-initial-setup.md` — Git 설치 경로, 프로젝트 폴더 이동, `git config`, GitHub 원격 저장소, IntelliJ 연동 흐름 정리.
+  - `wiki/entities/git.md` — Git의 역할과 이 위키에서의 학습 맥락 정리.
+  - `wiki/entities/github.md` — GitHub의 역할과 이 위키에서의 학습 맥락 정리.
+- 수정한 파일:
+  - `wiki/index.md` — 새 요약/엔티티 페이지 3개를 등록하고 전체 페이지 수를 갱신함.
+
+## [2026-06-30] ingest | 2026-02-27 Java 기본 자료형과 연산자
+
+- 목적: 2026-02-27 Java 수업 본문에 추가된 기본 자료형, 변수 선언, 산술/대입/복합 대입/증감 연산자, GitHub 원격 저장소 이슈 내용을 위키에 반영함.
+- 읽은 원본:
+  - `raw/Study/1. Java/2026.02.27(금)/2026.02.27(금).md`
+  - `raw/Study/1. Java/2026.02.27(금)/깃허브 초기 설정.md`
+- 생성한 파일:
+  - `wiki/summaries/2026-02-27-java-basic-types-operators.md` — Java 자료형, 변수, 연산자 실습과 GitHub 관련 이슈를 수업 흐름대로 정리.
+  - `wiki/concepts/java-basic-types.md` — `char`, `String`, `int`, `double`, `boolean`의 의미와 헷갈리는 점 정리.
+  - `wiki/concepts/java-operators.md` — 산술/대입/복합 대입/증감 연산자의 의미와 실행 순서 정리.
+  - `wiki/entities/java.md` — 이 위키에서 Java의 위치와 학습 이력 정리.
+- 수정한 파일:
+  - `wiki/index.md` — 새 요약/개념/엔티티 페이지 4개를 등록하고 전체 페이지 수를 갱신함.
+  - `wiki/summaries/2026-02-27-github-initial-setup.md` — 같은 날짜 Java 수업 요약으로 연결되는 관련 링크를 추가함.
+
+## [2026-06-30] note | Java raw MD 검토 재개 위치
+
+- 목적: 다음 세션에서 사용자가 raw MD 변환 결과 검토를 이어갈 위치를 잊지 않도록 기록함.
+- 현재 사용자가 확인한 위치:
+  - `raw/Study/1. Java/2026.03.04(수)/2026.03.04(수).md` — 파일 중간 정도까지 검토함.
+- 다음에 이어볼 위치:
+  - `raw/Study/1. Java/2026.03.04(수)/2026.03.04(수).md`의 중간 이후부터 계속 검토.
+
+## [2026-06-30] ingest | raw Study 수업 자료 대량 정리
+
+- 목적: `raw/Study/`에 쌓여 있던 Java, Oracle, UI&UX 수업 자료 중 실내용이 있는 Markdown을 날짜순 위키 요약과 핵심 개념/엔티티 페이지로 통합함.
+- 처리한 원본:
+  - `raw/Study/1. Java/2026.03.03(화)/2026.03.03(화).md`
+  - `raw/Study/1. Java/2026.03.04(수)/2026.03.04(수).md`
+  - `raw/Study/1. Java/2026.03.05(목)/2026.03.05(목).md`
+  - `raw/Study/1. Java/2026.03.06(금)/2026.03.06(금).md`
+  - `raw/Study/1. Java/2026.03.09(월)/2026.03.09(월).md`
+  - `raw/Study/1. Java/2026.03.10(화)/2026.03.10(화).md`
+  - `raw/Study/1. Java/2026.03.11(수)/2026.03.11(수).md`
+  - `raw/Study/1. Java/2026.03.12(목)/2026.03.12(목).md`
+  - `raw/Study/1. Java/2026.03.13(금)/2026.03.13(금).md`
+  - `raw/Study/2. Oracle/2026.03.13(금) - 시작/2026.03.13(금) - 시작.md`
+  - `raw/Study/2. Oracle/2026.03.16(월)/2026.03.16(월).md`
+  - `raw/Study/2. Oracle/2026.03.17(화)/2026.03.17(화).md`
+  - `raw/Study/2. Oracle/2026.03.18(수)/2026.03.18(수).md`
+  - `raw/Study/2. Oracle/2026.03.19(목)/2026.03.19(목).md`
+  - `raw/Study/2. Oracle/2026.03.20(금)/2026.03.20(금).md`
+  - `raw/Study/3. UI&UX/2026.03.23(월) - 시작/2026.03.23(월) - 시작.md`
+  - `raw/Study/3. UI&UX/2026.03.24(화)/2026.03.24(화).md`
+  - `raw/Study/3. UI&UX/2026.03.25(수)/2026.03.25(수).md`
+  - `raw/Study/3. UI&UX/2026.03.26(목)/2026.03.26(목).md`
+  - `raw/Study/3. UI&UX/2026.03.27(금)/2026.03.27(금).md`
+- 제외/보류한 원본:
+  - `raw/Study/0. 교육명/**`, `raw/Study/4. FrontEnd_BackEnd/**`, `raw/Study/5. Linux/**`, `raw/Study/6. AWS/**`, `raw/Study/7. Ci&CD/**`, `raw/Study/8. Passwordless/**`, `raw/Study/10. Python/**` 중 현재 30줄/174자 수준의 시간표 템플릿 파일은 실내용이 없어 요약 페이지를 만들지 않음.
+- 생성한 파일:
+  - `wiki/summaries/2026-03-03-java-logic-ternary.md`
+  - `wiki/summaries/2026-03-04-java-control-flow.md`
+  - `wiki/summaries/2026-03-05-java-for-while.md`
+  - `wiki/summaries/2026-03-06-java-while-array.md`
+  - `wiki/summaries/2026-03-09-java-class-object.md`
+  - `wiki/summaries/2026-03-10-java-constructor-overloading-inheritance.md`
+  - `wiki/summaries/2026-03-11-java-inheritance-polymorphism.md`
+  - `wiki/summaries/2026-03-12-java-abstract-interface-static.md`
+  - `wiki/summaries/2026-03-13-java-project-oracle-start.md`
+  - `wiki/summaries/2026-03-16-oracle-dbms-sql-dbeaver.md`
+  - `wiki/summaries/2026-03-17-oracle-ddl-dml-constraints-sequence.md`
+  - `wiki/summaries/2026-03-18-oracle-constraints-validation.md`
+  - `wiki/summaries/2026-03-19-oracle-functions-join-subquery.md`
+  - `wiki/summaries/2026-03-20-database-modeling-normalization-view-index.md`
+  - `wiki/summaries/2026-03-23-html-css-intro.md`
+  - `wiki/summaries/2026-03-24-css-layout-javascript-intro.md`
+  - `wiki/summaries/2026-03-25-bootstrap-form.md`
+  - `wiki/summaries/2026-03-26-javascript-dom-product-pages.md`
+  - `wiki/summaries/2026-03-27-jquery-ui-interaction.md`
+  - `wiki/concepts/java-conditional-logic.md`
+  - `wiki/concepts/java-loop.md`
+  - `wiki/concepts/java-array.md`
+  - `wiki/concepts/java-class-object.md`
+  - `wiki/concepts/java-inheritance.md`
+  - `wiki/concepts/java-abstract-interface.md`
+  - `wiki/concepts/oracle-sql-basics.md`
+  - `wiki/concepts/oracle-constraints-sequence.md`
+  - `wiki/concepts/oracle-functions-join-subquery.md`
+  - `wiki/concepts/database-modeling-normalization.md`
+  - `wiki/concepts/html-css-basics.md`
+  - `wiki/concepts/javascript-dom.md`
+  - `wiki/concepts/bootstrap-basics.md`
+  - `wiki/concepts/jquery-basics.md`
+  - `wiki/entities/oracle-database.md`
+  - `wiki/entities/dbeaver.md`
+  - `wiki/entities/html.md`
+  - `wiki/entities/css.md`
+  - `wiki/entities/javascript.md`
+  - `wiki/entities/bootstrap.md`
+  - `wiki/entities/jquery.md`
+- 수정한 파일:
+  - `wiki/index.md` — 새 요약/개념/엔티티 페이지를 등록하고 전체 페이지 수를 54개로 갱신함.
+  - `wiki/log.md` — 이번 ingest 기록을 추가함.
+  - `wiki/entities/java.md` — 2026-03-03~2026-03-12 Java 학습 이력 링크를 추가함.
+- 비고: 대량 정리이므로 각 페이지는 `status: growing` 초안으로 두었고, 원본의 `추가 공부`, `중요`, 질문 표시가 있는 부분은 추후 보강 대상으로 남김.
