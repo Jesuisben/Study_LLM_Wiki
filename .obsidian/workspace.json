@@ -11,14 +11,10 @@
             "id": "71066878599e4e62",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "raw/ai-instructions/karpathy-agent-guidelines.md",
-                "mode": "source",
-                "source": false
-              },
+              "type": "empty",
+              "state": {},
               "icon": "lucide-file",
-              "title": "karpathy-agent-guidelines"
+              "title": "새 탭"
             }
           }
         ]
@@ -194,15 +190,15 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "71066878599e4e62",
+  "active": "7c29ee296c96d9f0",
   "lastOpenFiles": [
+    "raw/ai-instructions/karpathy-agent-guidelines.md",
     "raw/ai-instructions/hermes-agent-llm-wiki-initial-setup.md",
     "raw/markdown-grammar/markdown-grammar.md",
     "raw/무제",
     "raw/Study",
     "raw/markdown-grammar",
     "raw/ai-instructions/hermes-default-profile-instructions.md",
-    "raw/ai-instructions/karpathy-agent-guidelines.md",
     "wiki/log.md",
     "raw/ai-instructions",
     "AGENTS.md",
